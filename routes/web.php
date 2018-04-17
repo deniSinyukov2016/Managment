@@ -10,7 +10,7 @@
 //Route::get('invite/confirm/{remember_token}', 'InvateController@confirm')->name('invite.confirm');
 
 
-Route::get('dashboard', 'DashboardController@index')->name('dashboard.index');
+Route::get('admin/dashboard', 'DashboardController@index')->name('dashboard.index');
 
 
 Route::middleware(['auth'])->group(function () {
