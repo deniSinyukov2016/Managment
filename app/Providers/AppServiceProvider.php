@@ -13,7 +13,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $sidebarItems = config('navigation.sidebar_dashboard');
+
+        /** Sidebar */
+        view()->composer('includes.sidebar',function ($query) use ($sidebarItems) {
+            $query->with('sidebarItems', $sidebarItems);
+        });
     }
 
     /**
